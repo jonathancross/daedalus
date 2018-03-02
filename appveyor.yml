@@ -8,7 +8,7 @@ environment:
   AWS_SECRET_ACCESS_KEY:
     secure: DbpP02aDGoC3Tdsi3+ONm8ov0nuXzEF/Yi453SBKj38qjROzvPXo6qW44bYiKBf4
   CERT_PASS:
-    secure: 9tjYxdz1fqibx1WOrP5yn32iwbEXeYx+Btb5QJqHvMO4Ng2/yUtPi00/ZMXihFWV
+    secure: +0AvNVzpsQfSa5Z9uwz+hYPp9jt+KcXwaw81RfSjEco=
   # Avoid long paths on Windows
   STACK_ROOT: "c:\\sr"
 
