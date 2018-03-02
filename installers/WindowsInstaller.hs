@@ -24,7 +24,7 @@ import           System.Directory (doesFileExist)
 import           System.Environment (lookupEnv)
 import           System.IO (writeFile)
 import           Text.Read (readMaybe)
-import           Turtle (ExitCode (..), echo, proc, procs)
+import           Turtle (ExitCode (..), echo, proc, procs, shells)
 import           Turtle.Line (unsafeTextToLine)
 
 import           Config
@@ -201,7 +201,7 @@ main = do
     generateConfig (Request Win64 cluster' Topology) "dhall" "wallet-topology.yaml"
 
     echo "Packaging frontend"
-    procs "npm" ["run", "package", "--", "--icon", "installers/icons/64x64"] mempty
+    shells "npm run package -- --icon installers/icons/64x64" mempty
 
     echo "Adding permissions manifest to cardano-launcher.exe"
     procs "C:\\Program Files (x86)\\Windows Kits\\8.1\\bin\\x64\\mt.exe" ["-manifest", "cardano-launcher.exe.manifest", "-outputresource:cardano-launcher.exe;#1"] mempty
